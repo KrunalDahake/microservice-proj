@@ -21,10 +21,10 @@ services:
     webapi: 
         build:
             context: ./javaapi
-        container_name: webapi
         ports:
             - "9000:9000"
-        restart: always    
+        restart: always
+        container_name: webapi    
         depends_on:
            [emartdb]
 
