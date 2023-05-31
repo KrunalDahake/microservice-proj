@@ -29,7 +29,6 @@ services:
            [emartdb]
 
     nginx:
-        restart: always
         image: nginx:latest
         container_name: nginx
         volumes:
