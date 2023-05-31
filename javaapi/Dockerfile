@@ -5,6 +5,7 @@ RUN apt update && apt install maven -y
 RUN  mvn install -DskipTests
 
 FROM openjdk:8 
+WORKDIR /usr/src/app
 COPY --from=build_image /usr/src/app/target/book-work-0.0.1-SNAPSHOT.jar  /usr/src/app/book-work.jar
 ENTRYPOINT ["java","-jar","book-work.jar"]
 
