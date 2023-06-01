@@ -48,10 +48,11 @@ services:
     emartdb:
         image: mysql:5.7   
         container_name: emartdb
-        environment:
-                - MYSQL_ROOT_PASSWORD=emartdbpass
-                - MYSQL_DATABASE=books
         ports:
-            - "3306:3306"                                      
+           - "3306:3306"   
+        environment:
+            - MYSQL_ROOT_PASSWORD=emartdbpass
+            - MYSQL_DATABASE=books
+                                           
 
             
